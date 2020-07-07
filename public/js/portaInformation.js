@@ -39,8 +39,8 @@ const info = {
             viewMore: 'view more'
         },
         navbar: {
-            intro: 'Home',
-            services: 'My Services',
+            cover: 'Home',
+            myservices: 'My Services',
             aboutme: 'About me',
             work: 'My Work',
         }
@@ -85,8 +85,8 @@ const info = {
             viewMore: 'ver mas'
         },
         navbar: {
-            intro: 'Principal',
-            services: 'Mi Servicios',
+            cover: 'Principal',
+            myservices: 'Mi Servicios',
             aboutme: 'Acerca de mi',
             work: 'My Trabjo',
         }

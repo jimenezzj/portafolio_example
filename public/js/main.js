@@ -95,8 +95,7 @@ function loadInfo() {
     myWorkSubTitle.innerHTML = getInfo.work.subTitle;
 
     // Fill navbar
-    console.log(navBarsItems)
-    navBarsItems.forEach(ele => ele.innerHTML = getInfo.navbar[ele.id]);
+    navBarsItems.forEach(ele => ele.innerHTML = getInfo.navbar[ele.classList[0]]);
 
     btnMyWork.innerHTML = getInfo.buttons.work;
 }
