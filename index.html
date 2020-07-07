@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">&#60; jhonnyDev &#62; </a>
+        </div>
+        <div class="languages">
+            <button id="btnEn" class="btnLang btn-light">EN</button>
+            <button id="btnEs" class="btnLang btn-light">ES</button>
+        </div>
+        <button class="navToggle">
+            <span class="hamburger" aria-label="toggle navigation"></span>
+        </button>
+        <nav id="nav" class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#intro" id="intro" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" id="services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="#aboutme" id="aboutme" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" id="work" class="nav__link">My Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="intro">
+        <h1 class="section__title section__title--intro">
+            <strong></strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">web dev</p>
+        <img src="assets/images/profile_pic_jonathan.png" alt="a picture of Jhonny smiling" class="intro__img">
+    </section>
+
+    <!-- My Services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services"></h2>
+        <div class="services">
+            <div class="service">
+                <h3 class="service__title service__title--front"></h3>
+                <p>
+                    <strong class="service__subtitle service__subtitle--front">:</strong>
+                    <span>JavaScript, TypeScript, CSS & HTML5</span>
+                </p>
+                <p>
+                    <strong class="service__subtitle service__subtitle--front">:</strong>
+                    <span>React, Angular, Bootstrap, Materialize</span>
+                </p>
+            </div>
+            <!--/ service-->
+            <div class="service">
+                <h3 class="service__title service__title--back"></h3>
+                <p>
+                    <strong class="service__subtitle service__subtitle--back">:</strong>
+                    <span>NodeJS, Java, MongoDB, MySQL</span>
+                </p>
+                <p>
+                    <strong class="service__subtitle service__subtitle--back">:</strong>
+                    <span>Express, Mongoose, JWT, SpringBoot</span>
+                </p>
+            </div>
+            <!--/ service-->
+            <div class="service">
+                <h3 class="service__title service__title--ui"></h3>
+                <p>
+                    <strong class="service__subtitle service__subtitle--ui">:</strong>
+                    <span>Adobe XD & Adobe Photoshop</span>
+                </p>
+            </div>
+            <!--/ service -->
+        </div>
+        <button id="btn-my-work">My Work</button>
+        <!--/ services -->
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="aboutme">
+        <h2 class="section__title section__title--about"></h2>
+        <p class="section__subtitle section__subtitle--about"></p>
+        <div class="about-me__body">
+            <p>
+            </p>
+            <p>
+            </p>
+        </div>
+        <img src="./assets/images/profile_pic_jonathan.png" alt="Jhonny leading against a bus" class="about-me__img">
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--myWork"></h2>
+        <p class="section__subtitle section__subtitle--myWork"></p>
+        <div class="portafolio">
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/TaskApp.png" alt="" class="portafolio__img">
+            </a>
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/RoadVisor.png" alt="" class="portafolio__img">
+            </a>
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/logoBlancoDos.png" alt="" class="portafolio__img">
+            </a>
+            <!-- <a href="#" class="portafolio__item">
+                <img src="assets/images/logoBlancoDos.png" alt="" class="portafolio__img">
+            </a>
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/logoBlancoDos.png" alt="" class="portafolio__img">
+            </a>
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/logoBlancoDos.png" alt="" class="portafolio__img">
+            </a>
+            <a href="#" class="portafolio__item">
+                <img src="assets/images/logoBlancoDos.png" alt="" class="portafolio__img">
+            </a> -->
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <a href="mailto:jimenezzj@hotmail.com" class="footer__link">jimenezzj@hotmail.com</a>
+        <div class="socialList">
+            <li class="socialList__item">
+                <a href="https://www.linkedin.com/in/jonathanjz/" class="socialList__link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="socialList__item">
+                <a href="mailto:jimenezzj@hotmail.com" class="socialList__link" target="_blank">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </li>
+            <li class="socialList__item">
+                <a href="tel:+506-8758-7123" class="socialList__link">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </li>
+            <!-- <li class="socialList__item">
+                <a href="" class="socialList__link">
+                    d
+                </a>
+            </li> -->
+        </div>
+    </footer>
+
+    <script src='js/portaInformation.js'></script>
+    <script src='js/main.js'></script>
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/6a1bb9c51a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
