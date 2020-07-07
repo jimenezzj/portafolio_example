@@ -1,0 +1,12 @@
+{
+  "name": "portafolio-example",
+  "version": "1.0.0",
+  "description": "porfotolio example",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d public" 
+  },
+  "author": "Jonthan Jimenez Zambrana",
+  "license": "ISC"
+  // "homepages": "htt"
+}
