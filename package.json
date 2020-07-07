@@ -4,9 +4,9 @@
   "description": "porfotolio example",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d public" 
+    "deploy": "gh-pages -d public"
   },
   "author": "Jonthan Jimenez Zambrana",
-  "license": "ISC"
-  // "homepages": "htt"
+  "license": "ISC",
+  "homepage": "https://jimenezzj.git.io/portafolio_example"
 }
