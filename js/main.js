@@ -3,6 +3,8 @@ const navLinks = document.querySelectorAll('.nav__link')
 const btnMyWork = document.querySelector('#btn-my-work');
 const btnEn = document.querySelector('#btnEn');
 const btnEs = document.querySelector('#btnEs');
+const expMainWrapper = document.querySelector("#work-wrapper");
+const educMainWrapper = document.querySelector("#education-wrapper");
 
 // Intro elements
 const introEle = document.querySelector('.section__title--intro');
@@ -31,6 +33,14 @@ const aboutBody = document.querySelectorAll('.about-me__body p');
 // My work elements
 const myWorkTitle = document.querySelector('.section__title--myWork');
 const myWorkSubTitle = document.querySelector('.section__subtitle--myWork');
+
+// Goals
+const goalsTitle = document.querySelector(".section__title--goals");
+const goalsBody = document.querySelectorAll(".goals__body .goals__item");
+
+// Work & Education
+const workWrapper = document.querySelector("#work-wrapper");
+const educationWrapper = document.querySelector("#education-wrapper");
 
 let currentLang = btnEn.id;
 
@@ -96,8 +106,73 @@ function loadInfo() {
 
     // Fill navbar
     navBarsItems.forEach(ele => ele.innerHTML = getInfo.navbar[ele.classList[0]]);
-
     btnMyWork.innerHTML = getInfo.buttons.work;
+
+    // fill experience section
+    if (document.querySelector("#work-wrapper > .experience-list "))
+        document.querySelectorAll("#work-wrapper > .experience-list ").forEach(i => i.remove());
+    fillExpirienceSection(getInfo.experiences, "exp");
+
+    // fill education section
+    if (document.querySelector("#education-wrapper > .experience-list "))
+        document.querySelectorAll("#education-wrapper > .experience-list ").forEach(i => i.remove());
+    fillExpirienceSection(getInfo.education, "educ");
+
+    // fill goals
+    fillGoals(getInfo);
+
+    // Work & education Wrapper
+    educationWrapper.querySelector("h2").innerHTML = getInfo.we.education.title;
+    educationWrapper.querySelector("p").innerHTML = getInfo.we.education.subTitle;
+
+    workWrapper.querySelector("h2").innerHTML = getInfo.we.work.title;
+    workWrapper.querySelector("p").innerHTML = getInfo.we.work.subTitle;
+}
+
+function fillExpirienceSection(expsList, typeList) {
+    // if (document.querySelector("#work-wrapper > .experience-list ")) {
+    //     document.querySelector("#work-wrapper > div").remove();
+    // }
+
+    let expWrapper = document.createElement("div");
+    expWrapper.classList.add("experience-list");
+    let img = document.createElement("img");
+    img.classList.add("experience-list__img");
+    let expTitle = document.createElement("h3");
+    expTitle.classList.add("experience-list__title");
+    let expSubTitle = document.createElement("p");
+    expSubTitle.classList.add("experience-list__subtitle");
+
+    expWrapper.appendChild(img);
+    expWrapper.appendChild(expTitle);
+    expWrapper.appendChild(expSubTitle);
+
+    expsList.forEach(ex => {
+        let listWrapp = document.createElement("ul");
+        let expList = document.createElement("div");
+        expList.classList.add("experience-list__body");
+        img.src = ex.companyImg;
+        expTitle.innerHTML = ex.title;
+        expSubTitle.innerHTML = ex.subtitle;
+        ex.desc.forEach(d => {
+            let item = document.createElement("li");
+            item.innerHTML = d;
+            listWrapp.appendChild(item);
+        });
+        expList.appendChild(listWrapp);
+        expWrapper.appendChild(expList);
+        if (typeList === "exp") expMainWrapper.appendChild(expWrapper.cloneNode(true));
+        if (typeList === "educ") educMainWrapper.appendChild(expWrapper.cloneNode(true));
+        expList.remove();
+    });
+}
+
+function fillGoals(info) {
+    goalsTitle.innerHTML = info.goals.title;
+    goalsBody.forEach((item, i) => {
+        item.querySelector("h2").innerHTML = info.goals.items[i].title;
+        item.querySelector("p").innerHTML = info.goals.items[i].description;
+    });
 }
 
 changeLang(btnEn.id);
